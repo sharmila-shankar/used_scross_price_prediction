@@ -1,0 +1,43 @@
+{% load static %}
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+<body>
+
+  <form action="calculate">
+  
+    <h1>USED CAR PRICE PREDICTION - S CROSS </h1>
+
+    <fieldset>
+      <label for="job">Variant</label>
+      <select id="job" name="md" value="{{md}}">
+          <option value="Alpha">Alpha</option>
+          <option value="Delta">Delta</option>
+          <option value="Sigma">Sigma</option>
+          <option value="Zeta">Zeta</option>
+      </select>
+
+      <label for="mail">Year</label>
+      <input type="text" id="mail" name="yr" value="{{yr}}">
+
+      <label for="job">Fuel Type</label>
+      <select id="job" name="fl" value="{{fl}}">
+          <option value="Diesel">Diesel</option>
+          <option value="Petrol">Petrol</option>
+      </select>
+
+      <label for="mail">Kilometer</label>
+      <input type="text" id="mail" name="km" value="{{km}}">
+     </fieldset>
+
+    <button type="submit" value="PREDICT">PREDICT</button><br>
+
+    <h2>Predicted Price {{predicted}}</h2>
+  </form><br>
+</body>
+</html>
